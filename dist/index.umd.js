@@ -101,9 +101,10 @@ function parse(rtttl) {
   var REQUIRED_SECTIONS_NUM = 3;
   var SECTIONS = rtttl.split(':');
 
-  if (SECTIONS.length !== REQUIRED_SECTIONS_NUM) {
+  /*if (SECTIONS.length !== REQUIRED_SECTIONS_NUM) {
     throw new Error('Invalid RTTTL file.');
   }
+  */
 
   var NAME = getName(SECTIONS[0]);
   var DEFAULTS = getDefaults(SECTIONS[1]);
