@@ -101,10 +101,10 @@ function parse(rtttl) {
   var REQUIRED_SECTIONS_NUM = 3;
   var SECTIONS = rtttl.split(':');
 
-  /*if (SECTIONS.length !== REQUIRED_SECTIONS_NUM) {
+  if (SECTIONS.length !== REQUIRED_SECTIONS_NUM) {
     throw new Error('Invalid RTTTL file.');
   }
-  */
+  
 
   var NAME = getName(SECTIONS[0]);
   var DEFAULTS = getDefaults(SECTIONS[1]);
@@ -164,7 +164,7 @@ function getDefaults(defaults) {
     var VAL = KEY_VAL[1];
 
     var ALLOWED_DURATION = ['1', '2', '4', '8', '16', '32'];
-    var ALLOWED_OCTAVE = ['4', '5', '6', '7'];
+    var ALLOWED_OCTAVE = ['1','2','3','4', '5', '6', '7','8','9'];
     var ALLOWED_BPM = ['25', '28', '31', '35', '40', '45', '50', '56', '63', '70', '80', '90', '100', '112', '125', '140', '160', '180', '200', '225', '250', '285', '320', '355', '400', '450', '500', '565', '635', '715', '800', '900'];
 
     switch (KEY) {
